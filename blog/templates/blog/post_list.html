@@ -4,7 +4,16 @@
     </head>
     <body>
         <div>
-            <h1><a href="">My First Blog</a></h1>
+            <h1><strong>The Ultimate Quotes</strong></h1>
         </div>
+    {% for post in posts %}
+        <div>
+            <h2><a href="">{{ post.title }}</a></h2>
+        </div>
+        <div>
+            <p>published: {{ post.created_date }}</p>
+            <p><em>{{ post.content | linebreaksbr }}</em></p>
+        </div>
+    {% endfor %}
     </body>
 </html>
